@@ -3,679 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Five - IT Solutions</title>
-    <style>
-        :root {
-            --primary: #4353FF;
-            --primary-light: #6A78FF;
-            --secondary: #2A3256;
-            --accent: #FF5E7D;
-            --light: #F0F3FF;
-            --gray: #F5F7FF;
-            --dark: #1D2033;
-            --text: #555B7B;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-        }
-        
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            background-color: #FCFCFF;
-            color: var(--text);
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        
-        header {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 1.2rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-            backdrop-filter: blur(10px);
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--dark);
-            text-decoration: none;
-            letter-spacing: -1px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo::before {
-            content: "";
-            display: inline-block;
-            width: 8px;
-            height: 24px;
-            background-color: var(--primary);
-            margin-right: 8px;
-            border-radius: 4px;
-        }
-        
-        .logo span {
-            color: var(--primary);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-        
-        .nav-links a {
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            padding: 0.5rem 0;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-links a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-        
-        .main-content {
-            margin-top: 75px;
-            min-height: 100vh;
-        }
-        
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #4353FF 0%, #6A78FF 100%);
-            color: white;
-            text-align: center;
-            padding: 8rem 2rem 6rem;
-            border-radius: 0 0 30% 30% / 30px;
-            margin-bottom: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -20%;
-            width: 140%;
-            height: 150%;
-            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
-            pointer-events: none;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-        
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-            color: var(--secondary);
-            text-align: center;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 30px rgba(67, 83, 255, 0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(0,0,0,0.03);
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(67, 83, 255, 0.1);
-        }
-
-        .vertical-layout {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            /* gap: 1.5rem; */
-        }
-        
-        .product-img {
-            width: 200px;
-            height: 200px;
-            background-color: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            display: inline-block;
-            margin-bottom: 1rem;
-            margin-top: 4rem;
-            margin-left: 2rem;
-         }
-        .product-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        
-        .product-card:hover .product-img img {
-            transform: scale(1.05);
-        }
-        
-        .product-details {
-            padding: 2rem;
-        }
-        
-        .product-title {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--secondary);
-            font-weight: 600;
-        }
-        
-        .feature-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-        
-        .feature-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.8rem;
-        }
-        
-        .feature-list li:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 9px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: var(--primary);
-        }
-        
-        .badge {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
-        
-        .mission-vision {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        
-        .mission, .vision {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(67, 83, 255, 0.06);
-            border: 1px solid rgba(0,0,0,0.03);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .mission::before, .vision::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-light), var(--primary));
-        }
-        
-        .mission h3, .vision h3 {
-            font-size: 1.6rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-            font-weight: 600;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 3.5rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(67, 83, 255, 0.06);
-            border: 1px solid rgba(0,0,0,0.03);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-info::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-light), var(--primary));
-        }
-        
-        .contact-info p {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            text-align: center;
-        }
-        
-        .contact-info a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-        
-        .contact-info a:hover {
-            color: var(--primary-light);
-        }
-        
-        .social-links {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--gray);
-            color: var(--primary);
-            border-radius: 50%;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        footer {
-            background-color: var(--secondary);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 2.5rem 1rem;
-            font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .coming-soon {
-            background-color: var(--gray);
-            padding: 2.5rem;
-            text-align: center;
-            border-radius: 16px;
-            margin-top: 4rem;
-            border: 1px solid rgba(0,0,0,0.03);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .coming-soon::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--accent), var(--primary-light));
-        }
-        
-        .coming-soon h3 {
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            font-weight: 600;
-            font-size: 1.4rem;
-        }
-        
-        .release-info {
-            background-color: var(--gray);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1.5rem;
-        }
-        
-        .release-info h4 {
-            margin-bottom: 0.8rem;
-            color: var(--secondary);
-            font-weight: 600;
-            font-size: 1.2rem;
-        }
-        
-        .release-info p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .app-store-btn {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white !important;
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 1rem;
-            font-weight: 500;
-            transition: all 0.3s;
-            box-shadow: 0 4px 10px rgba(67, 83, 255, 0.2);
-        }
-        
-        .app-store-btn:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(67, 83, 255, 0.3);
-        }
-        
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: row;
-                align-items: center;
-            }
-            
-            .nav-links {
-                flex-direction: row;
-                margin-top: 0;
-                gap: 2rem;
-                width: auto;
-            }
-            
-            .nav-links li {
-                margin: 0;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .mission, .vision {
-                padding: 1.5rem;
-            }
-            
-            .contact-info {
-                padding: 2rem;
-            }
-        }
-    </style>
+    <title>Studio5 - Just Make It</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo" onclick="showSection('home'); return false;">Studio<span>Five</span></a>
-            <ul class="nav-links">
-                <li><a href="#" onclick="showSection('home'); return false;">Home</a></li>
-                <li><a href="#" onclick="showSection('products'); return false;">Products</a></li>
-                <li><a href="#" onclick="showSection('contact'); return false;">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="logo">Studio5</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
-    
-    <div class="main-content">
-        <section id="home" class="page-section hero">
-            <div class="section-inner">
-                <h1>우리가 먼저 만들고 있어요</br>만들고 싶었거든요</h1>
-                <p>Studio Five는 좋은 아이디어를 좋은 창의적인 경험으로 바꾸는 팀입니다</p>
-            </div>
-        </section>
-        
-        <section id="home-content" class="page-section info-section">
-            <div class="section-inner">
-                <h2 class="section-title">소개</h2>
-                <p class="product-description" style="text-align: center; max-width: 600px; margin: 0 auto 60px;">
-                    Studio Five는 게임, 앱, 디자인 등
-                    ‘이거 있으면 좋겠다’ 싶은 걸 직접 만듭니다.</br>
-                    우리와 함께 하는 사용자에게 자연스럽게 다가가도록 만들고 있어요.</br>
-                    쓰는 순간, 왜 이제야 나왔지 싶은 제품을 만들고 싶어요..
-                </p>
-                
-                <div class="mission-vision">
-                    <div class="mission">
-                        <h3>미션</h3>
-                        <p>꼭 필요한 기능,</br>
-                            익숙한 디자인,</br>
-                            그리고 기분 좋은 사용 경험까지.</br>
-                            일상 속에서 ‘이거 편하다’ 싶은 순간을 만들고 싶어요.</p>
-                    </div>
-                    <div class="vision">
-                        <h3>비전</h3>
-                        <p>작아도 할 건 다 하는 팀으로,</br>
-                            Studio Five만의 색깔로,</br>
-                            천천히, 그리고 확실하게,</br>
-                            세상을 재밌게 바꿔가고 싶어요.</p>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section id="products" class="page-section" style="display: none;">
-            <div class="section-inner">
-                <h2 class="section-title">Works</h2>
-                
-                <div class="grid-container">
-                    
-                    <div class="product-card vertical-layout">
-                        
-                        <div class="product-img">
-                            <img src="/images/PastaPortionPro.png" alt="PastaPortionPro" />
-                        </div>
-                        
-                        <div class="product-details">
-                            <h3 class="product-title">Pasta Portion Pro <span class="badge">대표 제품</span></h3>
-                            <p class="product-description">
-                                완벽한 파스타 요리를 위한 스마트 솔루션입니다. 정확한 계량과 조리 시간 계산으로 홈셰프들에게 최적의 요리 경험을 제공합니다.
-                            </p>
-                            
-                            <ul class="feature-list">
-                                <li><strong>파스타 분량 측정:</strong> 모든 iPhone 모델에서 정확한 파스타 분량을 측정하여 일관된 요리를 도와줍니다.</li>
-                                <li><strong>칼로리 계산:</strong> 조리하는 파스타의 칼로리를 쉽게 계산할 수 있습니다.</li>
-                                <li><strong>조리 시간 관리:</strong> 최적의 조리 시간을 설정하고 알림을 받아 완벽한 알덴테 파스타를 완성할 수 있습니다.</li>
-                                <li><strong>히스토리 관리:</strong> 이전 요리 기록을 저장하고 분석하여 요리 실력을 향상시킬 수 있습니다.</li>
-                                <li><strong>프리미엄 기능:</strong> 무제한 히스토리 관리와 가족 공유 기능 등 추가 기능을 제공합니다.</li>
-                            </ul>
-                            
-                            <div class="release-info">
-                                <h4>출시 정보</h4>
-                                <p><strong>버전:</strong> 1.2.0</p>
-                                <p><strong>업데이트 날짜:</strong> 2024년 7월 11일</p>
-                                <p><strong>언어 지원:</strong> 영어, 중국어</p>
-                                <p><strong>가격:</strong> 무료 (인앱 구매 제공)</p>
-                                <a href="https://apps.apple.com/us/app/pasta-portion-pro/id6503697331?l=" target="_blank" class="app-store-btn">App Store에서 보기</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/images/FourCutStory.png" alt="네컷스토리" />
-                        </div>
-                        <div class="product-details">
-                            <h3 class="product-title">네컷스토리 <span class="badge">인기 앱</span></h3>
-                            <p class="product-description">
-                                추억을 더 특별하게 만들어주는 네컷 사진 앱입니다. 다양한 프레임과 스티커로 자신만의 스타일을 표현해보세요.
-                            </p>
-                            
-                            <ul class="feature-list">
-                                <li><strong>다양한 프레임과 스티커:</strong> 1,000가지 이상의 스타일을 표현할 수 있는 프레임과 스티커를 제공합니다.</li>
-                                <li><strong>간편한 사용:</strong> 세 번의 터치만으로 네컷 사진을 제작할 수 있는 직관적인 인터페이스를 갖추고 있습니다.</li>
-                                <li><strong>자동 촬영 기능:</strong> 한 번의 터치로 자동 촬영이 시작되어 자연스러운 순간을 기록할 수 있습니다.</li>
-                                <li><strong>정기적인 업데이트:</strong> 매달 새로운 프레임과 스티커가 추가되어 다양한 스타일을 연출할 수 있습니다.</li>
-                                <li><strong>즉시 공유 및 저장:</strong> 촬영 후 바로 친구들과 공유하거나 갤러리에 저장할 수 있습니다.</li>
-                            </ul>
-                            
-                            <div class="release-info">
-                                <h4>출시 정보</h4>
-                                <p><strong>버전:</strong> 1.0.2</p>
-                                <p><strong>업데이트 날짜:</strong> 2024년 12월 29일</p>
-                                <p><strong>언어 지원:</strong> 한국어</p>
-                                <p><strong>가격:</strong> $0.99</p>
-                                <a href="https://apps.apple.com/gb/app/%EB%84%A4%EC%BB%B7%EC%8A%A4%ED%86%A0%EB%A6%AC/id6670216246" target="_blank" class="app-store-btn">App Store에서 보기</a>
-                            </div>
-                        </div>
-                    </div>
 
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="slogan">Just Make It</h2>
+                <p class="description">감성적이고 실용적인 앱과 게임을 만드는 소형 개발 팀입니다.<br>
+                빠른 실행, 실험적인 개발, 유저 중심의 반복 개선을 통해 의미 있는 서비스를 만듭니다.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h3>진행 중인 프로젝트</h3>
+                <div class="project-grid">
+                    <!-- 출시됨 -->
+                    <div class="project-card">
+                        <h4>Pasta Portion Pro</h4>
+                        <p>파스타 정확한 양 측정 및 칼로리 계산 앱</p>
+                        <span class="status launched">출시됨</span>
+                        <a href="https://apps.apple.com/in/app/pasta-portion-pro/id6503697331" class="app-link" target="_blank">App Store</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>네컷스토리</h4>
+                        <p>감성 포토 프레임 앱</p>
+                        <span class="status launched">출시됨</span>
+                        <a href="https://apps.apple.com/us/app/%EB%84%A4%EC%BB%B7%EC%8A%A4%ED%86%A0%EB%A6%AC/id6670216246" class="app-link" target="_blank">App Store</a>
+                    </div>
+                    
+                    <!-- 출시 예정 -->
+                    <div class="project-card">
+                        <h4>Echo (마지막 말)</h4>
+                        <p>헤어진 연인에게 익명 메시지를 보내는 앱</p>
+                        <span class="status launching">출시 예정</span>
+                    </div>
+                    
+                    <!-- 출시 예정/개발 중 -->
+                    <div class="project-card">
+                        <h4>사주명언</h4>
+                        <p>오행 분석 기반 자기계발 명언 푸시 앱</p>
+                        <span class="status launching">출시 예정</span>
+                        <a href="fatequote-privacy.html" class="privacy-link">개인정보처리방침</a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h4>인민의 이름으로</h4>
+                        <p>증거 기반 판결 재판 게임</p>
+                        <span class="status development">챕터1 개발 중</span>
+                    </div>
+                    
+                    <!-- 기획 중 -->
+                    <div class="project-card">
+                        <h4>영포티 키우기</h4>
+                        <p>40대 남성 성장형 클리커 시뮬레이션</p>
+                        <span class="status planning">기획 중</span>
+                    </div>
+                    
+                    <!-- 실험 중 -->
+                    <div class="project-card">
+                        <h4>기타 프로젝트</h4>
+                        <p>실험용 앱 및 GPT 연동 사이드 프로젝트</p>
+                        <span class="status experimental">실험 중</span>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="contact" class="page-section contact-section" style="display: none;">
-            <div class="section-inner">
-                <h2 class="section-title">Contact</h2>
-            
-            <div class="contact-info">
-                <p>문의사항이 있으시면 언제든지 연락해주세요.</br>
-                    기다리고 있겠습니다.
-                
-                </p>
-                <p>이메일: <a href="mailto:studiofiveteam@gmail.com">studiofiveteam@gmail.com</a></p>
-                <p>인스타그램: <a href="https://www.instagram.com/studiofiveteam" target="_blank">@studiofiveteam</a></p>
-                
-                <div class="social-links">
-                    <a href="https://www.instagram.com/studiofiveteam" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Studio5. All rights reserved.<br />
-            상호: 스튜디오5(Studio5) | 사업자등록번호: 897-78-00494 | 대표 김성현<br />
-            이메일: studiofiveteam@gmail.com | 주소: 부산광역시 부산진구 부전로 43, 서면베르빌 오피스텔 909호 (부전동)
-        </p>
-        
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Studio5. All rights reserved.</p>
+            <p>Contact: <a href="mailto:studiofiveteam@gmail.com">studiofiveteam@gmail.com</a></p>
+        </div>
     </footer>
-
-    <script>
-        function showSection(sectionId) {
-            // 모든 섹션 숨기기
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // 선택한 섹션만 표시하기
-            if(sectionId === 'home') {
-                document.getElementById('home').style.display = 'block';
-                document.getElementById('home-content').style.display = 'block';
-            } else {
-                document.getElementById(sectionId).style.display = 'block';
-            }
-            
-            // 네비게이션 링크 활성화 상태 업데이트
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.textContent.toLowerCase() === sectionId) {
-                    link.classList.add('active');
-                }
-                if(sectionId === 'home' && link.textContent === 'Home') {
-                    link.classList.add('active');
-                }
-            });
-            
-            // 페이지 상단으로 스크롤
-            window.scrollTo(0, 0);
-        }
-        
-        // 페이지 로드 시 기본으로 홈 섹션 표시
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('home');
-        });
-    </script>
 </body>
 </html>
