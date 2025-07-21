@@ -131,6 +131,15 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.status-row {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.links-row {
+    text-align: left;
+}
+
 .status {
     display: inline-block;
     padding: 6px 12px;
@@ -193,7 +202,7 @@ nav a:hover {
 
 .privacy-link {
     display: inline-block;
-    margin-left: 10px;
+    margin-right: 10px;
     padding: 6px 12px;
     background: #6c757d;
     color: white;

@@ -131,6 +131,21 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.project-links {
+    margin-top: 15px;
+}
+
+.link-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 10px;
+}
+
+.link-row:last-child {
+    margin-bottom: 0;
+}
+
 .status {
     display: inline-block;
     padding: 6px 12px;
@@ -173,7 +188,6 @@ nav a:hover {
 
 .app-link {
     display: inline-block;
-    margin-left: 10px;
     padding: 6px 12px;
     background: #007aff;
     color: white;
@@ -193,7 +207,6 @@ nav a:hover {
 
 .privacy-link {
     display: inline-block;
-    margin-left: 10px;
     padding: 6px 12px;
     background: #6c757d;
     color: white;
@@ -209,6 +222,10 @@ nav a:hover {
 .privacy-link:hover {
     background: #545b62;
     text-decoration: none;
+}
+
+.privacy-link:first-child {
+    margin-left: 0;
 }
 
 /* Footer */
