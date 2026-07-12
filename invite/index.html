@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>결제선언 동료 초대</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --brand: #0a8cff;
+      --brand-dark: #0072d9;
+      --text: #101114;
+      --secondary: #7b7f87;
+      --line: #e7e9ed;
+      --surface: #f6f7f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: #fff;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", sans-serif;
+      display: grid;
+      place-items: center;
+    }
+
+    main {
+      width: min(100%, 520px);
+      min-height: 100svh;
+      padding: max(56px, env(safe-area-inset-top)) 24px max(28px, env(safe-area-inset-bottom));
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand {
+      color: var(--secondary);
+      font-size: 15px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .content {
+      margin: auto 0;
+      padding: 48px 0 56px;
+    }
+
+    .app-icon {
+      width: 76px;
+      height: 76px;
+      border-radius: 19px;
+      background: linear-gradient(145deg, #3d7df4, #2866e6);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 8vw, 42px);
+      line-height: 1.18;
+      letter-spacing: -0.055em;
+    }
+
+    .description {
+      margin: 16px 0 0;
+      color: var(--secondary);
+      font-size: 18px;
+      line-height: 1.55;
+      letter-spacing: -0.025em;
+    }
+
+    .invite-code {
+      margin-top: 34px;
+      padding: 18px 0 12px;
+      border-bottom: 2px solid var(--text);
+    }
+
+    .invite-code span {
+      display: block;
+      color: var(--secondary);
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    .invite-code strong {
+      display: block;
+      font-size: 21px;
+      letter-spacing: 0.04em;
+      overflow-wrap: anywhere;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button {
+      width: 100%;
+      min-height: 58px;
+      border: 0;
+      border-radius: 17px;
+      display: grid;
+      place-items: center;
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 750;
+      letter-spacing: -0.025em;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .primary:active { background: var(--brand-dark); }
+
+    .secondary {
+      background: var(--surface);
+      color: var(--secondary);
+    }
+
+    .note {
+      margin: 17px 4px 0;
+      color: var(--secondary);
+      font-size: 13px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .invalid .invite-code,
+    .invalid #openApp { display: none; }
+
+    @media (min-width: 600px) {
+      main { min-height: auto; padding: 52px 44px 42px; }
+      body { background: var(--surface); }
+      main {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="page">
+    <div class="brand">Studio5 · 결제선언</div>
+
+    <section class="content">
+      <div class="app-icon" aria-hidden="true">✦</div>
+      <h1 id="title">동료로 초대받았어요</h1>
+      <p class="description" id="description">결제선언 앱을 열어 초대를 확인하고<br>함께 행사를 관리해보세요.</p>
+
+      <div class="invite-code">
+        <span>초대코드</span>
+        <strong id="token">확인 중</strong>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a class="button primary" id="openApp" href="#">결제선언에서 초대 확인하기</a>
+      <button class="button secondary" id="copyCode" type="button">초대코드 복사</button>
+    </div>
+    <p class="note" id="note">앱이 설치되어 있지 않다면 초대코드를 복사해두세요.<br>App Store 출시는 준비 중입니다.</p>
+  </main>
+
+  <script>
+    (() => {
+      const pathParts = location.pathname.split('/').filter(Boolean);
+      const pathToken = pathParts[0] === 'invite' ? pathParts[1] : '';
+      const queryToken = new URLSearchParams(location.search).get('token') || '';
+      const token = decodeURIComponent(pathToken || queryToken).trim();
+      const page = document.getElementById('page');
+      const tokenLabel = document.getElementById('token');
+      const openApp = document.getElementById('openApp');
+      const copyCode = document.getElementById('copyCode');
+
+      if (!token) {
+        page.classList.add('invalid');
+        document.getElementById('title').textContent = '초대 링크를 확인해주세요';
+        document.getElementById('description').innerHTML = '초대코드가 없거나 올바르지 않은 링크예요.<br>초대한 분에게 새 링크를 요청해주세요.';
+        copyCode.style.display = 'none';
+        document.getElementById('note').textContent = '결제선언 · Studio5';
+        return;
+      }
+
+      tokenLabel.textContent = token;
+      openApp.href = 'paymentdeclaration://invite?code=' + encodeURIComponent(token);
+
+      copyCode.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(token);
+          copyCode.textContent = '복사했어요';
+        } catch {
+          const area = document.createElement('textarea');
+          area.value = token;
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand('copy');
+          area.remove();
+          copyCode.textContent = '복사했어요';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
