@@ -167,6 +167,10 @@ function normalizeCodeInput(value) {
 elements.appleLogin.addEventListener("click", () => signIn("apple"));
 elements.kakaoLogin.addEventListener("click", () => signIn("kakao"));
 
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) setProviderButtonsDisabled(false);
+});
+
 elements.promotionCode.addEventListener("input", (event) => {
     const formatted = normalizeCodeInput(event.target.value);
     if (formatted !== event.target.value) event.target.value = formatted;
