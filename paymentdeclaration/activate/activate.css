@@ -1,0 +1,383 @@
+:root {
+    color-scheme: light;
+    --accent: #0a8cff;
+    --accent-dark: #0074db;
+    --text: #101114;
+    --secondary: #7d8088;
+    --line: #e7e9ee;
+    --surface: #f5f6f8;
+    --error: #e5484d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 50% -10%, rgba(10, 140, 255, 0.10), transparent 38%),
+        #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+.activation-shell {
+    width: min(100%, 520px);
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: max(36px, env(safe-area-inset-top)) 22px max(24px, env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.activation-card {
+    width: 100%;
+    padding: 36px 30px 30px;
+    border: 1px solid rgba(16, 17, 20, 0.06);
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 22px 70px rgba(24, 39, 67, 0.10);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 42px;
+}
+
+.app-mark {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: linear-gradient(145deg, #397bff, #2564e9);
+    font-size: 29px;
+    line-height: 1;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 750;
+    letter-spacing: -0.04em;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    margin-bottom: 10px;
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.page-header h1 {
+    margin-bottom: 12px;
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.16;
+    letter-spacing: -0.055em;
+}
+
+.page-header > p:last-child {
+    color: var(--secondary);
+    font-size: 16px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+}
+
+.login-actions {
+    display: grid;
+    gap: 12px;
+}
+
+.provider-button,
+.primary-button,
+.logout-button {
+    width: 100%;
+    min-height: 58px;
+    border-radius: 17px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: transform 120ms ease, opacity 120ms ease, background-color 120ms ease;
+}
+
+.provider-button:active,
+.primary-button:active,
+.logout-button:active {
+    transform: scale(0.985);
+}
+
+.provider-button:disabled,
+.primary-button:disabled,
+.logout-button:disabled {
+    cursor: wait;
+    opacity: 0.55;
+}
+
+.apple-button {
+    color: #fff;
+    background: #050505;
+}
+
+.kakao-button {
+    color: #191600;
+    background: #fee500;
+}
+
+.kakao-symbol {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: #191600;
+    position: relative;
+    transform: translateY(2px);
+}
+
+.kakao-symbol::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    bottom: -3px;
+    border-top: 5px solid #191600;
+    border-right: 5px solid transparent;
+    transform: rotate(12deg);
+}
+
+.account-summary {
+    margin-bottom: 26px;
+    padding: 17px 18px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--surface);
+}
+
+.account-summary > div {
+    min-width: 0;
+    display: grid;
+    gap: 3px;
+}
+
+.summary-label {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 650;
+}
+
+#account-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+}
+
+.provider-pill {
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    border-radius: 999px;
+    color: #5c6068;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#activation-form {
+    display: grid;
+}
+
+#activation-form label {
+    margin: 0 2px 9px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#promotion-code {
+    width: 100%;
+    height: 60px;
+    padding: 0 17px;
+    border: 1.5px solid var(--line);
+    border-radius: 16px;
+    outline: none;
+    color: var(--text);
+    background: #fff;
+    font-size: 16px;
+    font-weight: 680;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+#promotion-code:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(10, 140, 255, 0.11);
+}
+
+#promotion-code::placeholder {
+    color: #b8bbc2;
+    font-weight: 550;
+    letter-spacing: -0.01em;
+}
+
+.form-message {
+    margin: 10px 3px 0;
+    color: var(--error);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.primary-button {
+    margin-top: 16px;
+    color: #fff;
+    background: var(--accent);
+}
+
+.primary-button:hover {
+    background: var(--accent-dark);
+}
+
+.logout-button {
+    margin-top: 12px;
+    color: #5f626a;
+    background: transparent;
+}
+
+.logout-button:hover {
+    background: var(--surface);
+}
+
+.logout-button.prominent {
+    margin-top: 28px;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+#loading-view {
+    min-height: 260px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 18px;
+    color: var(--secondary);
+    font-size: 15px;
+}
+
+.spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #e7e9ed;
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    margin: 8px auto 26px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    background: var(--accent);
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.success-header {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.supporter-badge {
+    margin-top: 24px;
+    padding: 13px 16px;
+    border-radius: 15px;
+    color: #765500;
+    background: #fff4c5;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 720;
+}
+
+.supporter-badge span {
+    margin-right: 5px;
+    color: #f2b800;
+}
+
+.error-eyebrow {
+    color: var(--error);
+}
+
+.activation-footer {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    color: #999ca3;
+    font-size: 12px;
+}
+
+.activation-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (max-width: 560px) {
+    .activation-shell {
+        justify-content: flex-start;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .activation-card {
+        padding: 30px 22px 24px;
+        border-radius: 27px;
+    }
+
+    .brand {
+        margin-bottom: 34px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
