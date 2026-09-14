@@ -502,3 +502,32 @@ footer {
     }
 
 }
+
+/* HYPE CHEESE keeps the shared project-card layout and its own brand accent. */
+.hypecheese-project .hypecheese-project-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+.hypecheese-project .card-links a,
+.hypecheese-project .small-links a {
+    color: #ff9200;
+}
+.hypecheese-project .small-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+.hypecheese-project a:focus-visible {
+    outline: 3px solid #ff9200;
+    outline-offset: 5px;
+}
+
+.hypecheese-project .status-tag.dev { color: #e3e3e6; }
+.hypecheese-project .card-links a,
+.hypecheese-project .small-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+}
