@@ -505,10 +505,20 @@ footer {
 
 /* HYPE CHEESE keeps the shared project-card layout and its own brand accent. */
 .hypecheese-project .hypecheese-project-icon {
+    display: block;
     width: 64px;
     height: 64px;
     border-radius: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
+}
+.hypecheese-project-heading .status-tag {
+    display: table;
+    margin-bottom: 10px;
+}
+.hypecheese-project .card-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 28px;
 }
 .hypecheese-project .card-links a,
 .hypecheese-project .small-links a {

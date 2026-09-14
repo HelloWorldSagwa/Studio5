@@ -1,0 +1,107 @@
+{
+  "method": "Exact-position app-region cropping with macOS sips; no generated or retouched UI. Pointer pixels excluded by crop. Original captures retained in git history.",
+  "rectangles_xywh": {
+    "create-entry": [
+      36,
+      196,
+      380,
+      217
+    ],
+    "create-basics": [
+      36,
+      237,
+      380,
+      225
+    ],
+    "create-basics-cover": [
+      36,
+      279,
+      380,
+      525
+    ],
+    "create-cover": [
+      46,
+      812,
+      360,
+      130
+    ],
+    "create-world": [
+      36,
+      246,
+      380,
+      184
+    ],
+    "create-character": [
+      36,
+      251,
+      380,
+      370
+    ],
+    "create-introduction": [
+      36,
+      155,
+      380,
+      434
+    ],
+    "create-opening": [
+      36,
+      266,
+      380,
+      535
+    ],
+    "create-goal": [
+      36,
+      155,
+      380,
+      227
+    ],
+    "create-review": [
+      36,
+      151,
+      380,
+      380
+    ],
+    "create-complete": [
+      36,
+      579,
+      380,
+      273
+    ],
+    "play-opening": [
+      36,
+      149,
+      380,
+      390
+    ],
+    "play-response": [
+      36,
+      612,
+      380,
+      133
+    ],
+    "play-character-entry": [
+      36,
+      443,
+      380,
+      221
+    ],
+    "play-character-chat": [
+      36,
+      149,
+      380,
+      480
+    ],
+    "chat-menu": [
+      115,
+      201,
+      300,
+      440
+    ],
+    "chat-memory": [
+      115,
+      151,
+      300,
+      350
+    ]
+  }
+}

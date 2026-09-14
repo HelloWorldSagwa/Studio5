@@ -9,76 +9,83 @@
     "image_files_and_jpeg_signatures": true,
     "mobile_viewport": 390,
     "mobile_scroll_width": 390,
-    "desktop_visual_review": true
+    "desktop_visual_review": true,
+    "crop_visual_review_17_images": true,
+    "nested_image_alignment": {
+      "desktop_main_x": 297,
+      "desktop_detail_x": 297,
+      "width": 480
+    }
   },
   "screenshots": [
     {
       "file": "chat-memory.jpg",
-      "sha256": "4b82807f48577bd6bed2f6889c95cb179b9258e424f9b3fe9f28e133c706f0d7"
+      "sha256": "c3f93c06658bed4c7e9ed8e518421080015e2167b2f65e6cb561345d6c2ffb96"
     },
     {
       "file": "chat-menu.jpg",
-      "sha256": "387f6f2f40ad698a9a1ad3c18565bcae6083242719a0fd1b18e142222c29cf62"
+      "sha256": "d2c80c706e164c9376c4b78d8b74f811c896e7b63031d53fdd64a846217fea7b"
     },
     {
       "file": "create-basics-cover.jpg",
-      "sha256": "b5fca7fe7e73e95bbf7be833ee7f7ae24fbb22b11352ae601229a9e8f92325e7"
+      "sha256": "9e8a28bd37a3f7a4e55c1dbcf511998a24f70058315eca54c7ce687b5d36121f"
     },
     {
       "file": "create-basics.jpg",
-      "sha256": "e865137409514c778878e94676ab4ead0943d91531181839e7ce6ab67f9019de"
+      "sha256": "e720aee9694d5bbc5442d551a2c64fb5b64e4f3b026b4c0f8326c99e47138710"
     },
     {
       "file": "create-character.jpg",
-      "sha256": "28b7de17a6612a67136c2fe609c79edbe27822f4baf57f26062129544da27cc5"
+      "sha256": "34890574c8f6d375278cbae9bb63c00b4967c521647ee49da7bd5501f7fc71c7"
     },
     {
       "file": "create-complete.jpg",
-      "sha256": "bdeff9bd7897cc3fc0e5fe57f724e3b5b38bd3a1371fd095405cc8431455a33c"
+      "sha256": "e35e24d81bf1469c34eaff4ed4ff29e2d33f8a5037e8c1b45281b653bbac0d36"
     },
     {
       "file": "create-cover.jpg",
-      "sha256": "46d071b2182da3cd827f595369d567985fe34f8fb46e932ee31f34140d29c8f7"
+      "sha256": "be4daf63b0878f3667a58125f76a09facacfe2c2e447bf0be2c7f0350d9bbdf9"
     },
     {
       "file": "create-entry.jpg",
-      "sha256": "ea395a907f26d5b9bc06c97393b4da3d34e034d3f0d47333adb61570de68e2b1"
+      "sha256": "67498386f83a8f611116ab2488a04c2d38f7905dc0392c4fb349986a94941217"
     },
     {
       "file": "create-goal.jpg",
-      "sha256": "744c5816e723546922277b45ebaa245818b39de7421e788933ce01b55cd8045d"
+      "sha256": "74148ef56eee96decd65a4a67b480e991e6225f9b8bae0957dcd4f721ee47f10"
     },
     {
       "file": "create-introduction.jpg",
-      "sha256": "225368b069596c5ed0f25afb26b5802d2f24f09b99f9842c663639a60425446d"
+      "sha256": "930caa0c86d46716f20c9f82749c15d1874a1885ceec5419c0174564f82b9732"
     },
     {
       "file": "create-opening.jpg",
-      "sha256": "eba9371cfcae6f6a7a32295f2f08ddc7a47bc0aab37ebfeb7e524a01acab3546"
+      "sha256": "07a12d6b732daa77edeaccb44a001f349174c9d3a0afa6a77ee5af19936266a7"
     },
     {
       "file": "create-review.jpg",
-      "sha256": "84dc9d0e0897cae7098383d4a79e072f036e347d6311197f7abbf8c560ca9143"
+      "sha256": "dbfffae60dac6ba2d51ee031a0f23bcc4728a81db0ca3cf280712ffa06ec5c91"
     },
     {
       "file": "create-world.jpg",
-      "sha256": "3ae615fd7f5e70db7936339f684d5f0b210658be5e5b178c55cf61238020da7d"
+      "sha256": "420a479c48c879bc8fe9c9cfec9653c56b8377e491d777cfdd20c4f2c54ad257"
     },
     {
       "file": "play-character-chat.jpg",
-      "sha256": "f38b40f570e12e507247b092834efa45ae8a7ce074ec143bc4586e085eac8624"
+      "sha256": "010164b8e7da120893cf71c464abcbbe00c140c4a5f5bc024c9342e1f5b76b8b"
     },
     {
       "file": "play-character-entry.jpg",
-      "sha256": "cdb4be59c79f820baa5024535098b2703c57359bf9c8fdfeea0f48e008d0b8a3"
+      "sha256": "ec162f3a4dbd9a6b7d84eca6fd85fe28c67a01a9280f50bc6638d216ece961bc"
     },
     {
       "file": "play-opening.jpg",
-      "sha256": "5f26534d6b44069c4faf64e5c1eb603a2d9fc2dd589e51bd146e115461cc43a3"
+      "sha256": "58ffacc208e98098fb4eda1509d074953a8499bb1a26a4edf12ecce014db29ef"
     },
     {
       "file": "play-response.jpg",
-      "sha256": "ece09989fdd565388a6a75a40978a7688187245583e8108a3e9cee1e49872d5a"
+      "sha256": "cb4934af2d4e89246da0205d82a17b011e4e5f4fa195f4c7e51ed2b421a36fe6"
     }
-  ]
+  ],
+  "revision": "App-region crops, no simulator frame or visible pointer; compact one-column guide"
 }
