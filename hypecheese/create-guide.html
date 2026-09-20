@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="첫사랑과 마지막 무대를 만들며 배우는 하입치즈 제작 매뉴얼. 최신 초안 자동 저장, 여러 시작 장면, 이름별 자동 이미지, @이름_번호 호출과 스탯 설정을 단계별로 안내합니다.">
+<meta name="theme-color" content="#101010"><title>스토리 만들기 · 하입치즈 이용가이드</title>
+<link rel="canonical" href="https://studio5-ashy.vercel.app/hypecheese/create-guide.html">
+<link rel="icon" type="image/png" href="/hypecheese/assets/icon.png">
+<link rel="stylesheet" href="/hypecheese/assets/hypecheese.css"><link rel="stylesheet" href="/hypecheese/assets/creator-guide.css">
+<script src="/hypecheese/assets/creator-guide.js" defer></script></head>
+<body id="top" class="creator-manual"><a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/hypecheese/" aria-label="하입치즈 홈"><img src="/hypecheese/assets/icon.png" width="36" height="36" alt="">HYPE CHEESE</a>
+      <nav class="site-nav" aria-label="하입치즈 문서"><a href="/hypecheese/guide.html" aria-current="page">이용가이드</a><a href="/hypecheese/notices/">공지</a><a href="/hypecheese/updates/">업데이트</a></nav>
+    </div>
+  </header>
+
+<main id="main"><nav class="breadcrumb" aria-label="현재 위치"><a href="/hypecheese/">하입치즈</a><span aria-hidden="true">/</span><a href="/hypecheese/guide.html#create">이용가이드</a><span aria-hidden="true">/</span><span>스토리 만들기</span></nav>
+<p class="eyebrow">CREATOR GUIDE</p><h1>내 캐릭터로, 내 장면 만들기</h1><p class="lead">제목을 적는 순간부터 인물의 표정이 바뀌는 대화까지. 〈첫사랑과 마지막 무대〉를 만들며 버튼 사용법과 실제로 쓸 수 있는 연출을 함께 익혀 보세요.</p>
+<p class="meta"><span>최종 수정 2026.09.21</span><span>하입치즈 스토리 제작 매뉴얼</span></p>
+<div class="doc-layout"><nav class="toc" aria-label="만들기 목차"><h2>만들기 순서</h2><ol><li><a href="#example">예제 작품</a></li><li><a href="#entry">1 시작·화면 이동</a></li><li><a href="#basics">2 기본 정보·표지</a></li><li><a href="#world">3 세계관·금지전개</a></li><li><a href="#names">4 @이름 등록</a></li><li><a href="#assets">5 여러 이미지 등록</a></li><li><a href="#syntax">6 @이름_번호 호출</a></li><li><a href="#opening">7 시작 장면</a></li><li><a href="#direction">8 여섯 가지 연출</a></li><li><a href="#goals">9 목표·진행 규칙</a></li><li><a href="#stats">10 스탯·구간 반응</a></li><li><a href="#save">11 자동 저장·완성·AI</a></li><li><a href="#play">12 플레이·점검</a></li></ol></nav><article class="doc-content"><section class="doc-section" id="example"><p class="manual-section-label">이번에 만들 작품</p><h2><a class="heading-link" href="#example">첫사랑과 마지막 무대</a></h2>
+<p>축제 피날레까지 사흘. 급히 비어 버린 듀엣 자리를 맡았는데, 파트너가 3년 전 연락이 끊긴 첫사랑 <strong>강이준</strong>입니다. 연습실의 어색한 재회에서 시작해, 함께 무대에 오를지 스스로 선택하는 성인 캠퍼스 로맨스를 만들어 봅니다.</p>
+<p>설명만 읽고 끝내지 않도록 같은 작품의 입력값을 단계별로 제공합니다. <strong>기본 얼굴 한 장과 감정·상황 이미지 여섯 장</strong>을 한 인물에 등록하고, 웃음·갈등·사과·설렘을 각각 다른 그림으로 연출합니다.</p>
+<nav class="step-index" aria-label="빠르게 찾아보기"><a href="#names">@ 이름 등록</a><a href="#assets">한 이름에 여러 이미지</a><a href="#syntax">@이름_번호 호출</a><a href="#direction">여섯 가지 장면 연출</a><a href="#save">자동 저장·완성</a></nav>
+<p class="capture-note">회색 박스는 작가가 입력하는 예시입니다. 복사한 뒤 표시된 입력칸에 붙여 넣으세요. 시작 장면은 작성한 그대로 표시되고, 첫 행동을 보낸 뒤부터 AI가 이야기를 이어 갑니다.</p>
+<p class="manual-note"><strong>바뀐 만들기 방식</strong> · 작성 내용은 최신 초안으로 자동 저장됩니다. 프롤로그는 작품 상세에서 읽고, 채팅은 작가가 쓴 시작 장면으로 열립니다. <a href="#opening">시작 1·시작 2·+ 탭</a>으로 서로 다른 출발점을 만들 수 있습니다.</p>
+</section><section class="doc-section" id="entry"><p class="manual-section-label">01 · 편집기 열기</p><h2><a class="heading-link" href="#entry">어디서 시작하고, 어떤 버튼으로 이동하나요?</a></h2>
+<p class="manual-path"><strong>하단 작가센터 → 내 스토리 만들기(+) → 어떻게 만들까요? → 직접 만들기</strong></p>
+<p>처음 작품을 만든다면 작품에 표시할 필명을 먼저 정합니다. 필명은 1~20자입니다. <strong>직접 만들기</strong>는 빈 작품에서 시작합니다. <strong>AI로 초안 만들기</strong>를 고르면 아이디어를 입력한 뒤 <strong>초안 검토 → 이 초안으로 시작</strong>을 거쳐 편집합니다. 편집기는 <strong>기본 정보 → 세계관 및 핵심설정 → 등장인물 및 장소 → 시작 장면 → 진행 설정</strong>의 다섯 단계로 구성됩니다. 스탯이 필요하면 <strong>고급 설정 · 선택</strong>을 추가로 사용합니다.</p>
+<dl class="manual-controls"><dt>상단 탭</dt><dd>원하는 단계로 바로 이동합니다. 앞의 설정을 고칠 때 처음부터 다시 진행할 필요가 없습니다.</dd><dt>다음 1/5~4/5</dt><dd>입력을 마치고 키보드를 닫은 뒤 다음 단계로 이동합니다.</dd><dt>미리보기 5/5</dt><dd><strong>완성 전 확인</strong>에서 작성한 프롤로그와 시작 장면을 읽습니다.</dd><dt>상단 약 ○○토큰</dt><dd>설정의 예상 분량입니다. 누르면 모델별 <strong>토큰과 예상 요금</strong>을 확인합니다. <a href="#token-quote">예상 요금 읽는 법</a>을 참고하세요.</dd><dt>최신 초안 자동 저장</dt><dd>편집한 내용은 자동으로 저장됩니다. 실패하면 <strong>저장 실패 · 재시도</strong>가 표시됩니다. <a href="#save">자동 저장·완성 방법</a>을 참고하세요.</dd><dt>AI</dt><dd>현재 단계의 <strong>비어 있는 칸</strong>을 채우는 보조 기능입니다. 이미 쓴 내용을 통째로 바꾸지 않습니다. <a href="#ai">AI 사용법</a>을 참고하세요.</dd></dl>
+</section><section class="doc-section" id="basics"><p class="manual-section-label">02 · 기본 정보</p><h2><a class="heading-link" href="#basics">독자가 고를 수 있는 제목과 표지를 만들어요</a></h2>
+<p>작품을 고르기 전에 보이는 정보입니다. <strong>제목, 한 줄 소개, 적용한 표지, 장르, 태그 한 개 이상</strong>을 준비합니다.</p>
+<div class="table-scroll"><table><caption>예제 작품의 기본 정보</caption><thead><tr><th scope="col">입력칸</th><th scope="col">입력값·선택</th></tr></thead><tbody><tr><th scope="row">성인설정</th><td>일반</td></tr><tr><th scope="row">작품 성향</th><td>여성향</td></tr><tr><th scope="row">제목 · 20자</th><td>첫사랑과 마지막 무대</td></tr><tr><th scope="row">한 줄 소개 · 30자</th><td>3년 만에 만난 첫사랑과 마지막 듀엣</td></tr><tr><th scope="row">장르</th><td>로맨스</td></tr><tr><th scope="row">태그 · 최대 5개</th><td>첫사랑 · 재회 · 캠퍼스 · 밴드 · 선택</td></tr><tr><th scope="row">독점공개</th><td>끄기</td></tr></tbody></table></div>
+<h3 id="cover">표지 넣기와 이미지 맞추기</h3>
+<ol><li><strong>표지 이미지 → 업로드</strong>를 누릅니다. 기기의 사진을 쓰려면 <strong>라이브러리</strong>, 파일을 쓰려면 <strong>직접 업로드</strong>를 고릅니다.</li><li><strong>이미지 맞추기</strong>에서 얼굴과 상반신이 잘 보이도록 <strong>확대 / 좌우 / 상하</strong>를 조절합니다. 표지는 세로 2:3 비율입니다.</li><li><strong>적용</strong>을 눌러 실제 표지에 반영합니다. <strong>취소</strong>는 반영하지 않고 돌아갑니다.</li></ol>
+<p>이 예제에는 강이준의 얼굴이 충분히 보이는 기본 이미지를 씁니다. 홈의 작은 표지에서도 인물의 눈과 표정이 읽히도록 맞춰 보세요.</p>
+<dl class="manual-controls"><dt>이미지 라이브러리</dt><dd>앱에서 만든 이미지로 표지를 준비하는 경로입니다. <strong>라이브러리에서 업로드</strong>는 앱에 저장한 이미지를 고르는 기능입니다.</dd><dt>이미지 만들기</dt><dd>이미지 스타일과 프롬프트를 입력한 뒤 <strong>이미지 만들기</strong>를 누릅니다. 프롬프트는 2,000자까지이며, 생성된 결과를 선택해 사용합니다. <strong>전체보기</strong>로 결과 목록을 펼칩니다.</dd><dt>표지의 ×</dt><dd>적용한 표지를 해제합니다. 완성하려면 다른 표지를 적용해야 합니다.</dd><dt>독점공개</dt><dd>작품의 독점 속성을 정합니다. 이 토글을 켜는 것과 작품을 전체 공개하는 것은 별개입니다.</dd></dl>
+<h3>태그는 입력 후 엔터로 확정해요</h3><p><code>첫사랑</code>을 적고 <strong>엔터</strong>를 누릅니다. <code>#첫사랑</code> 칩이 생기면 등록된 것입니다. 같은 방법으로 재회·캠퍼스·밴드·선택을 추가합니다. 태그는 각각 10자까지이며, 칩의 <strong>×</strong>로 삭제합니다. 같은 태그는 중복 추가되지 않습니다.</p>
+</section><section class="doc-section" id="world"><p class="manual-section-label">03 · 세계관 및 핵심설정</p><h2><a class="heading-link" href="#world">배경, 갈등, 아직 모르는 사실을 나눠 적어요</a></h2>
+<p>공개 소개에는 독자가 궁금해할 관계를, 이 칸에는 AI가 전개할 때 알아야 할 사정을 적습니다. <strong>어디서 시작하는지 → 두 사람에게 무슨 일이 있었는지 → 지금 무엇을 선택하는지</strong> 순서로 작성하면 첫 장면의 방향이 분명해집니다.</p>
+<div class="manual-example"><div class="manual-example-head"><p>세계관 및 핵심설정에 입력</p><button type="button" class="copy-example" data-copy-example="sample-world" aria-label="세계관 및 핵심설정에 입력 복사">복사</button></div><pre><code id="sample-world">현대 한국의 해온대학교. 대학 축제 마지막 날까지 사흘 남았다. 축제 피날레 듀엣의 한 사람이 갑자기 빠지고, @user는 새 파트너로 초대받아 음악관 연습실에 도착한다. 문 안에서 기다리는 사람은 3년 전 연락이 끊긴 첫사랑 강이준이다.
+
+두 사람은 3년 전 함께 준비한 작은 공연에 서기로 약속했다. 그날 이준은 오지 않았고, 제대로 된 설명 없이 연락을 피했다. @user가 그 일로 무엇을 느꼈는지, 지금 이준을 다시 좋아하는지는 플레이어가 정한다. 이준은 무대 직전 심한 불안으로 도망쳤고, 기대를 저버렸다는 수치심 때문에 연락하지 못했다. 이는 이준이 직접 이야기하기 전까지 @user가 아는 사실이 아니다.
+
+이준은 졸업 후 다른 도시의 밴드에 합류할 예정이라 이번 축제가 학교에서의 마지막 무대다. 그는 듀엣을 핑계로 다시 대화할 기회를 얻고 싶지만, @user에게 용서나 연애를 요구할 권리는 없다고 생각한다. 재회, 합주 중 충돌, 공연 전 솔직한 대화, 마지막 무대 순서로 진행한다. 선택에 따라 다시 가까워질 수도, 좋은 무대만 함께 만든 뒤 각자의 길을 갈 수도 있다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<h3>금지전개에는 피해야 할 결과를 구체적으로 적어요</h3><p>“잘해 줘”보다 “칭찬 한 번을 고백으로 해석하지 않는다”처럼 원하는 경계를 적습니다. 이 예제에서는 이준이 사과할 수 있지만, <code>@user</code>의 용서와 연애 감정은 플레이어가 선택합니다.</p>
+<div class="manual-example"><div class="manual-example-head"><p>금지전개에 입력 · 선택</p><button type="button" class="copy-example" data-copy-example="sample-forbidden" aria-label="금지전개에 입력 · 선택 복사">복사</button></div><pre><code id="sample-forbidden">@user의 대사·행동·속마음·연애 감정을 대신 정하지 않는다. 동의 없이 연인 관계, 화해, 신체 접촉을 확정하지 않는다. 이준의 과거 사정을 첫 응답에서 전부 설명하지 않는다. 이준이 직접 말하지 않은 비밀을 @user가 이미 안다고 서술하지 않는다. 슬픈 표정이나 한 번의 칭찬을 곧바로 고백·용서로 해석하지 않는다. 새 인물을 갑자기 경쟁 상대로 끼워 넣거나 사건을 해결하려고 불의의 사고를 추가하지 않는다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p>세계관·금지전개·등장인물 및 장소의 설정에는 예전의 개별 5,000자·3,000자 제한이 없습니다. 입력한 글자 수를 보며 작성하고, 전체 설정의 허용량은 <a href="#token-quote">토큰 기준</a>으로 확인합니다.</p>
+<p class="manual-note">개별 인물의 말투·성격은 다음 단계에, 장면이 넘어가는 속도는 <a href="#goals">진행 규칙</a>에 적습니다. 같은 설정을 여러 칸에서 서로 다르게 쓰지 마세요. 긴 설명을 반복하는 것보다 일관된 핵심 정보가 도움이 됩니다.</p>
+</section><section class="doc-section" id="names"><p class="manual-section-label">04 · 등장인물 및 장소</p><h2><a class="heading-link" href="#names">@로 이름을 등록한 뒤, 그 사람을 설명해요</a></h2>
+<ol><li><strong>등장인물 및 장소</strong> 입력칸의 새 줄에 <code>@강이준</code>을 입력합니다.</li><li><strong>엔터</strong>를 눌러 이름을 확정합니다. 주황색 이름 칩이 만들어지는지 확인합니다.</li><li>칩 아래에 나이·외형·성격·말투·관계와 행동 원칙을 씁니다.</li><li>장소는 새 줄에 <code>@장소 연습실</code>을 입력하고 엔터를 누른 뒤 설명을 적습니다.</li></ol>
+
+<div class="manual-example"><div class="manual-example-head"><p>등장인물 및 장소에 입력</p><button type="button" class="copy-example" data-copy-example="sample-entities" aria-label="등장인물 및 장소에 입력 복사">복사</button></div><pre><code id="sample-entities">@강이준
+24세. 해온대학교 밴드 보컬 겸 기타리스트. 헝클어진 흑발, 청록빛 눈, 왼쪽 귀의 작은 은색 귀걸이. 흰 셔츠와 차콜 카디건을 입는다. @user와 3년 전 함께 공연을 준비했던 첫사랑 사이였지만, 약속한 공연에 나타나지 않은 뒤 연락을 피했다. 지금은 같은 축제의 듀엣 파트너로 재회했다.
+평소 가벼운 농담과 짧은 반말로 긴장을 감춘다. 예: &#x27;너 아직도 박자 셀 때 입술 움직이네.&#x27; 진지해지면 농담을 멈추고 눈을 피했다가 다시 마주 본다. 불안한 날에는 기타 피크를 손가락으로 굴린다. 따뜻한 반응에는 환하게 웃고, 과거를 말할 때는 슬퍼하며, 다정한 칭찬에는 부끄러워한다. 비난을 받으면 잠깐 화가 나지만 상대를 위협하지 않는다.
+그날의 불안과 회피를 변명으로 삼지 않고 자기 잘못을 인정하려 한다. @user가 거리를 원하면 존중한다. 자신의 속마음은 대화가 충분히 이어진 뒤 직접 말한다.
+
+@장소 연습실
+해온대학교 음악관 3층. 오후 햇빛이 들어오는 창, 방음 패널, 마이크 두 대와 오래된 소파가 있다. 축제 듀엣을 맞추는 공간이다. 저녁에는 다른 부원들이 떠나 두 사람만 남는다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<div class="manual-note"><p><strong><code>@user</code>는 플레이어를 가리키는 예약 변수입니다.</strong> 캐릭터·장소·애셋의 이름으로 등록할 수 없습니다. “<code>@user</code>의 답을 기다린다”처럼 설명과 장면 본문에서 사용하면, 플레이어가 선택한 페르소나를 지칭합니다.</p></div>
+<dl class="manual-controls"><dt>이름 칩의 이름</dt><dd>이름을 다시 편집합니다. 이름을 바꾸려면 기존 칩을 수정하세요.</dd><dt>이름 칩의 ×</dt><dd>해당 등록을 삭제합니다. 연결된 애셋이 있으면 함께 사라진다는 확인이 뜹니다. <strong>취소</strong>하거나 내용을 확인한 뒤 <strong>삭제</strong>합니다.</dd><dt>키보드 위 @</dt><dd>인물·장소 이름을 입력할 때 사용합니다. 이름은 엔터로 확정합니다.</dd><dt>키보드 위 *</dt><dd>장면의 행동과 상황을 구분하는 별표를 넣습니다. <a href="#syntax">서술 문법</a>을 참고하세요.</dd><dt>키보드 위 @user</dt><dd>플레이어 변수를 입력합니다. 이 버튼이 있어도 등록 이름으로 사용할 수는 없습니다.</dd></dl>
+<p>이름은 20자까지, 등장인물은 최대 30명, 장소는 최대 12곳입니다. 같은 이름을 인물과 장소 양쪽에 중복 등록하지 마세요. 입력을 마치면 아래 <strong>애셋 설정</strong>에 등록한 이름이 나타납니다.</p>
+<h3 id="introduction">‘소개 편집’에는 스포일러를 빼고 적어요</h3>
+<p>강이준 행의 <strong>소개 편집</strong>을 누릅니다. <strong>캐릭터 소개 → 소개</strong>는 작품 상세에 보이는 공개 문장입니다. 캐릭터를 움직이는 비밀 설정을 그대로 옮기지 마세요.</p>
+<div class="manual-example"><div class="manual-example-head"><p>캐릭터 소개에 입력 · 최대 80자</p><button type="button" class="copy-example" data-copy-example="sample-character-intro" aria-label="캐릭터 소개에 입력 · 최대 80자 복사">복사</button></div><pre><code id="sample-character-intro">3년 전 약속한 무대에 오지 않았던 첫사랑. 마지막 축제를 앞두고, 다시 나의 듀엣 파트너가 됐다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p><strong>프롬프트로 생성</strong> 또는 <strong>다시 생성</strong>으로 초안을 받을 수도 있습니다. 과거에 사라진 이유까지 드러나지 않았는지 읽고, 상단 <strong>저장</strong>으로 확정합니다. <strong>취소</strong>는 변경을 확정하지 않습니다. 장소에는 공개 캐릭터 소개가 없습니다.</p>
+</section><section class="doc-section" id="assets"><p class="manual-section-label">05 · 애셋 설정</p><h2><a class="heading-link" href="#assets">한 명에게 여러 표정과 상황 이미지를 넣어요</a></h2>
+<p>애셋은 이야기 속에서 꺼내 보여 줄 이미지입니다. 강이준을 한 번 등록한 뒤, 같은 이름 아래에 <strong>기본 얼굴 + 웃음 + 슬픔 + 화남 + 부끄러움 + 놀람 + 무대</strong>를 연결합니다. 감정마다 새 캐릭터를 만들 필요가 없습니다.</p>
+<ol><li><strong>애셋 설정 → 강이준</strong> 행에서 가장 왼쪽 원형 사진을 누릅니다. <strong>직접 업로드</strong>로 기본 이미지를 고릅니다.</li><li>기본 사진 오른쪽의 <strong>+</strong>를 누르고 <strong>직접 업로드</strong>를 고릅니다. 이번에는 상황 이미지 파일을 여러 개 선택해 한 번에 추가할 수 있습니다.</li><li>추가된 사진 아래 <strong>상황</strong>을 누릅니다. 사진의 표정에 맞게 상황을 고른 뒤 <strong>완료</strong>로 저장합니다.</li><li>같은 행을 가로로 넘겨 모든 사진을 확인합니다. 한 화면에서 보기 어렵다면 <strong>전체보기</strong>로 애셋 설정을 펼칩니다.</li></ol>
+<div class="table-scroll"><table><caption>이 예제의 이미지 등록 순서와 호출 코드</caption><thead><tr><th scope="col">호출 코드</th><th scope="col">상황</th><th scope="col">보여 줄 순간</th></tr></thead><tbody><tr><th scope="row"><code>@강이준_00</code></th><td>기본</td><td>연습실에서 어색하게 재회</td></tr><tr><th scope="row"><code>@강이준_01</code></th><td>행복한</td><td>농담을 주고받다 환하게 웃음</td></tr><tr><th scope="row"><code>@강이준_02</code></th><td>슬픈</td><td>과거의 회피와 미안함을 털어놓음</td></tr><tr><th scope="row"><code>@강이준_03</code></th><td>화난</td><td>연습 중 날카로운 말로 갈등</td></tr><tr><th scope="row"><code>@강이준_04</code></th><td>부끄러운</td><td>뜻밖의 다정한 칭찬에 얼굴이 붉어짐</td></tr><tr><th scope="row"><code>@강이준_05</code></th><td>놀란</td><td>오래전 공연 티켓을 보고 놀람</td></tr><tr><th scope="row"><code>@강이준_06</code></th><td>무대에서 노래하는</td><td>마지막 축제 공연에서 노래함</td></tr></tbody></table></div>
+<h3>사진마다 상황을 설정해요</h3><p>웃는 사진에는 <strong>행복한</strong>, 우는 사진에는 <strong>슬픈</strong>, 찡그린 사진에는 <strong>화난</strong>, 얼굴이 붉어진 사진에는 <strong>부끄러운</strong>을 선택합니다. 직접 정하고 싶다면 <strong>원하는 상황을 직접 입력하세요</strong>에 <code>놀란</code> 또는 <code>무대에서 노래하는</code>을 입력하고 <strong>추가 → 완료</strong>를 누릅니다. 직접 입력은 20자까지입니다.</p>
+<details><summary>선택할 수 있는 기본 상황</summary><p>행복한, 신나는, 따뜻한, 호기심 있는, 집중한, 화난, 짜증난, 좌절한, 슬픈, 지루한, 걱정되는, 두려운, 긴장한, 부끄러운, 친구를 만나는, 처음 만나는, 일하는, 쉬는, 아침, 낮, 저녁, 밤, 비 오는, 눈 오는.</p></details>
+<dl class="manual-controls"><dt>기본 이미지</dt><dd>일반적으로 쓸 대표 사진입니다. 기본 이미지를 바꾸는 파일 선택은 한 장씩 합니다.</dd><dt>상황 이미지 +</dt><dd>같은 이름에 사진을 더합니다. <strong>직접 업로드</strong>의 다중 파일 선택은 이 +에서 이용합니다. 앱 라이브러리에서는 한 장씩 선택합니다.</dd><dt>만들기 / 라이브러리</dt><dd>새 이미지를 만들거나 앱에서 저장한 이미지를 불러오는 다른 경로입니다. 기존 이미지를 직접 올리는 것과 선택지가 다릅니다.</dd><dt>사진 누르기</dt><dd>해당 사진을 교체합니다. 기본 이미지를 고르면 <strong>썸네일 조정</strong>으로 얼굴의 원형 표시 위치를 바꿀 수도 있습니다.</dd><dt>상황 / 상황 변경</dt><dd>해당 사진이 쓰일 감정·상황을 다시 정합니다.</dd><dt>상황 사진의 −</dt><dd>그 상황 이미지 항목을 삭제합니다. 기본 사진의 ×는 기본 이미지를 해제합니다.</dd><dt>전체보기 / 완료</dt><dd>넓은 애셋 편집 화면을 열고 원래 만들기로 돌아갑니다.</dd><dt>행의 이동 손잡이</dt><dd>인물·장소의 나열 순서를 바꿉니다. 한 인물 안의 사진 번호를 바꾸는 버튼은 아닙니다.</dd></dl>
+<p class="manual-note"><strong>번호는 실제 이미지의 순서입니다.</strong> 기본 이미지는 <code>00</code>, 상황 이미지는 <code>01</code>부터입니다. 빈 항목은 세지 않습니다. 앞쪽 상황 이미지를 삭제하면 뒤 번호가 달라질 수 있으니, 코드를 새로 적을 때 현재 등록 순서를 확인하세요.</p>
+</section><section class="doc-section" id="syntax"><p class="manual-section-label">06 · @와 이미지 호출</p><h2><a class="heading-link" href="#syntax">이름, 대사, 그림을 구분해서 넣어요</a></h2>
+<div class="table-scroll"><table><caption>이름·이미지·서술 문법</caption><thead><tr><th scope="col">입력</th><th scope="col">뜻</th></tr></thead><tbody><tr><th scope="row"><code>강이준</code> 또는 <code>@강이준</code> 다음 줄에 대사</th><td>등록한 강이준을 화자로 표시하고 연결된 이미지를 자동으로 보여 줍니다.</td></tr><tr><th scope="row"><code>강이준: 무슨 곡인데?</code></th><td>한 줄에 이름과 대사를 씁니다. <code>강이준：무슨 곡인데?</code>처럼 전각 콜론도 사용할 수 있습니다.</td></tr><tr><th scope="row"><code>@강이준_02</code></th><td>등록한 강이준의 두 번째 상황 이미지, 이 예제에서는 슬픈 사진을 넣습니다.</td></tr><tr><th scope="row"><code>*창밖의 빗소리가 커진다.*</code></th><td>별표 사이 한 줄을 상황 서술로 구분합니다.</td></tr><tr><th scope="row"><code>@user</code></th><td>플레이어의 페르소나를 지칭합니다. 애셋 이름으로 등록하는 용도가 아닙니다.</td></tr></tbody></table></div>
+<h3 id="image-picker">방법 1. @이름을 입력하고 사진을 골라요</h3><ol><li>프롤로그나 시작 장면의 <strong>새 줄 맨 앞</strong>에 등록한 이름 그대로 <code>@강이준</code>을 입력합니다.</li><li>이름에 연결된 이미지 추천에서 원하는 표정을 누릅니다. 여러 장이면 가로로 넘깁니다.</li><li>입력한 이름이 그림으로 바뀝니다. 그 아래에 대사를 붙이려면 <strong>새 줄에 <code>@강이준</code>을 다시 쓰고 엔터</strong>를 누릅니다.</li><li>다음 줄에 강이준의 대사를 씁니다.</li></ol>
+<p>사진 선택은 특정 이미지를 직접 지정하는 동작입니다. 사진을 고르지 않고 등록한 이름과 대사만 작성해도 미리보기와 실제 장면에서는 연결된 이미지가 자동으로 표시됩니다. 이름 일부나 문장 중간의 언급에서는 사진 추천이 나타나지 않을 수 있습니다.</p>
+<h3 id="image-code">방법 2. @이름_번호를 직접 입력해요</h3>
+<div class="manual-example"><div class="manual-example-head"><p>프롤로그에 넣어 보는 슬픈 장면</p><button type="button" class="copy-example" data-copy-example="sample-image-code" aria-label="프롤로그에 넣어 보는 슬픈 장면 복사">복사</button></div><pre><code id="sample-image-code">*강이준이 구겨진 공연 티켓을 내려다본다.*
+@강이준_02
+@강이준
+그날 무서워서 도망쳤어. 너한테까지 숨은 건, 내가 잘못했어.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p>이름 뒤에 밑줄과 <strong>두 자리 번호</strong>를 붙입니다. <code>@강이준_02</code>를 입력하면 등록한 이미지로 바뀝니다. 그림 코드는 단독 줄에 두면 문장과 섞이지 않습니다. 등록하지 않은 이미지 번호를 적어도 새로운 그림이 만들어지지는 않습니다.</p>
+<h3 id="automatic-image">이름만 적어도 이미지가 함께 보여요</h3>
+<p>프롤로그와 시작 장면에서 <strong>등록한 이름만 있는 줄</strong>, <strong>이름: 대사</strong>, <strong>@이름</strong>을 화자 표시로 인식합니다. 이름 위에 연결된 이미지가 나타납니다. 문장 중간에서 이름을 언급한 것만으로는 화자로 바꾸지 않습니다.</p>
+<p>상황 라벨과 장면 내용이 맞으면 해당 이미지를 사용하고, 맞는 이미지가 없으면 기본 이미지, 기본 이미지도 없으면 등록된 첫 유효 이미지를 사용합니다. <strong>직접 고른 이미지나 <code>@이름_번호</code>가 우선</strong>하며, 같은 인물이 같은 이미지로 연속해서 말할 때는 그림을 반복하지 않습니다. 동명이인은 이름만으로 이미지를 자동 선택하지 않습니다.</p>
+<p>반드시 같은 표정을 보여야 하는 장면은 <strong>번호로 직접 지정</strong>하세요. 플레이어의 첫 행동 이후 AI가 이어 쓰는 대화는 상황 라벨과 장면 맥락에 따라 이미지 선택이 달라질 수 있습니다.</p>
+<p class="manual-note"><strong><code>@user</code>로 그림을 부르지 않습니다.</strong> 사용자 지칭은 캐릭터 이미지 등록·호출과 분리됩니다. 인물의 과거를 잠깐 언급하는 문장과 현재 장면의 화자 표시는 구분해 쓰세요.</p>
+</section><section class="doc-section" id="opening"><p class="manual-section-label">07 · 시작 장면</p><h2><a class="heading-link" href="#opening">상세의 프롤로그와 채팅의 시작 장면을 따로 써요</a></h2>
+<p><strong>프롤로그</strong>는 작품 상세 화면에서 읽는 공통 도입부입니다. 채팅에 다시 삽입되지 않습니다. <strong>시작 장면</strong>에는 <strong>이야기시작</strong>를 누른 뒤 채팅에 보여 줄 본문·대사·이미지를 직접 작성합니다. 입장할 때 AI가 첫 장면을 다시 만들지 않으므로, 독자가 읽을 완성된 문장으로 적으세요.</p>
+<div class="manual-example"><div class="manual-example-head"><p>프롤로그에 입력 · 최대 1,500자</p><button type="button" class="copy-example" data-copy-example="sample-prologue" aria-label="프롤로그에 입력 · 최대 1,500자 복사">복사</button></div><pre><code id="sample-prologue">*축제 피날레까지 사흘. 급히 비어 버린 듀엣 자리를 부탁받고 찾아온 연습실에서, 익숙한 기타 소리가 끊긴다.*
+
+@강이준_00
+
+@강이준
+…네가 온다고는 못 들었는데.
+
+*강이준. 3년 전 함께 오르기로 했던 무대에 끝내 나타나지 않은 사람. 의자 옆에는 마이크가 두 대 놓여 있다.*
+
+@강이준
+불편하면 다른 파트너 구할게. 그래도… 한 곡만 맞춰 볼래?
+
+*그가 비어 있는 마이크 쪽으로 시선을 옮긴다. 대답을 재촉하지는 않는다.*</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p><strong>프롤로그 미리보기</strong>로 서술·화자·대사·그림이 원하는 순서인지 읽어 봅니다. 기본 사진을 넣었다면 코드 글자 대신 실제 인물이 보이는지도 확인합니다.</p>
+<h3>시작 1에 독자가 읽을 장면을 작성해요</h3><p>공통 프롤로그 아래에서 <strong>시작 1</strong> 탭을 고르고 아래 본문을 입력합니다. 첫 장면은 AI에게 주는 연출 지침이 아니라 그대로 표시할 내용입니다. 사용자 행동을 보내면 그때부터 AI가 이어 갑니다.</p>
+<div class="manual-example"><div class="manual-example-head"><p>시작 장면에 입력 · 1,000자</p><button type="button" class="copy-example" data-copy-example="sample-opening" aria-label="시작 장면에 입력 · 1,000자 복사">복사</button></div><pre><code id="sample-opening">*강이준이 기타 피크를 손가락으로 굴리다 책상 위에 내려놓는다. 반쯤 열린 창으로 축제 리허설 소리가 들어온다.*
+
+@강이준_00
+강이준
+너 아직도 박자 셀 때 입술 움직이네.
+
+*짧게 웃은 그가 악보 한 부를 내민다. 종이 모서리에는 두 사람이 부를 파트가 서로 다른 색으로 표시돼 있다.*
+
+강이준: 곡은 바꿔도 돼. 일단 보고, 네 생각부터 들을게.
+
+*악보를 든 손이 두 사람 사이에서 멈춘다. 이준은 대답을 기다린다.*</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p><strong>시작 장면 미리보기</strong>로 선택한 탭의 본문·이미지와 초기 스탯을 확인합니다. 작성한 장면을 읽는 미리보기이며, 첫 응답을 AI에게 생성시키지 않습니다. 등장인물·세계관 등 필요한 설정이 비었다면 화면의 안내에 따라 먼저 채웁니다.</p>
+<h3>+로 다른 출발점을 만들어요</h3><ol><li>시작 탭 옆의 <strong>+</strong>를 눌러 <strong>시작 2</strong>를 추가합니다.</li><li>새 탭의 본문·이미지·추천 행동을 각각 작성합니다. 예를 들어 시작 1은 연습실 재회, 시작 2는 공연장 대기실의 재회로 구성할 수 있습니다.</li><li>탭을 오가며 내용이 따로 유지되는지 확인합니다. 각 탭의 <strong>시작 장면 미리보기</strong>로 결과를 읽습니다.</li><li>필요 없는 탭은 길게 눌러 <strong>시작 장면 삭제</strong>를 선택합니다. 마지막 하나는 남겨 둡니다.</li></ol>
+<p>프롤로그는 모든 시작이 함께 사용합니다. 새 플레이에서 시작이 여러 개면 하나를 선택하고, 하나뿐이면 바로 시작합니다. <strong>이어하기</strong>는 기존 회차를 유지하며 새로 시작할 때 출발점을 다시 고릅니다.</p>
+<h3>추천 행동으로 첫 선택을 열어 주세요</h3><p>선택한 시작 탭의 <strong>추천 행동 (선택) → 추가</strong>를 눌러 아래 항목을 하나씩 넣습니다. <strong>시작마다 최대 세 개, 각 200자</strong>까지 작성할 수 있습니다. 항목의 <strong>×</strong>로 삭제합니다.</p>
+<div class="manual-example"><div class="manual-example-head"><p>추천 행동에 한 항목씩 입력</p><button type="button" class="copy-example" data-copy-example="sample-actions" aria-label="추천 행동에 한 항목씩 입력 복사">복사</button></div><pre><code id="sample-actions">악보를 받으며 묻는다. &#x27;무슨 곡인데?&#x27;
+
+기타를 바라보다 말한다. &#x27;3년 전에도 이렇게 기다렸어.&#x27;
+
+마이크 앞에 선다. &#x27;일단 한 곡만 맞춰 보자.&#x27;</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p>셋 모두 “받아준다”로 만들기보다 <strong>다가가기 / 과거 묻기 / 우선 연습하기</strong>처럼 서로 다른 행동을 줍니다. 플레이어는 추천 대신 자기 문장을 입력할 수도 있습니다.</p>
+</section><section class="doc-section" id="direction"><p class="manual-section-label">08 · 장면 연출</p><h2><a class="heading-link" href="#direction">같은 인물로 여섯 가지 순간을 만들어요</a></h2><p>“감동적으로 써 줘”에서 끝내지 말고 <strong>보이는 몸짓 → 대사 → 어울리는 그림</strong>을 묶어 보세요. 아래 여섯 문장은 작가가 프롤로그나 시작 장면에 직접 넣어 볼 수 있는 연출 예시입니다. 자동 생성된 실제 응답을 옮긴 문장이 아닙니다.</p><h3 id="scene-smile">웃음 · 행복한</h3><p>농담 뒤에 표정이 풀리는 순간을 짧게 잡습니다. “행복해졌다”라는 설명보다 참던 웃음을 터뜨리는 몸짓을 씁니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-smile" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-smile">*강이준이 참던 웃음을 터뜨린다.*
+@강이준_01
+@강이준
+너랑 연습하면 한 곡 끝내는 데 왜 이렇게 오래 걸리냐.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3 id="scene-sad">슬픔 · 슬픈</h3><p>숨겨 둔 사정을 말할 때 사용합니다. 사과를 했다는 이유만으로 상대가 용서했다고 쓰지는 않습니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-sad" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-sad">*강이준이 구겨진 공연 티켓을 내려다본다.*
+@강이준_02
+@강이준
+그날 무서워서 도망쳤어. 너한테까지 숨은 건, 내가 잘못했어.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3 id="scene-angry">갈등 · 화난</h3><p>악보를 내려놓거나 짧아진 말투로 갈등을 드러냅니다. 표정의 강도와 대사가 맞아야 합니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-angry" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-angry">*강이준이 악보를 내려놓는다. 목소리에 잠깐 날이 선다.*
+@강이준_03
+@강이준
+아무렇지 않았던 건 아니야. 그렇다고 네가 기다린 시간이 없어지는 건 아니지만.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3 id="scene-shy">설렘 · 부끄러운</h3><p>얼굴이 붉어지고 시선을 피하는 순간을 보여 줍니다. 플레이어가 먼저 다정한 말을 했을 때 반응으로 쓰기 좋습니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-shy" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-shy">*칭찬을 들은 강이준이 귀 끝을 붉히며 시선을 피한다.*
+@강이준_04
+@강이준
+그런 말은… 박자 들어가기 전에 하지 마.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3 id="scene-surprised">뜻밖의 발견 · 놀란</h3><p>예전 티켓 같은 구체적인 계기를 둡니다. 놀람만으로 과거의 오해가 모두 해결되지는 않습니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-surprised" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-surprised">*강이준이 오래된 티켓을 보고 눈을 크게 뜬다.*
+@강이준_05
+@강이준
+그걸 아직 가지고 있었어?</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3 id="scene-stage">공연 · 무대에서 노래하는</h3><p>장소와 시간이 무대로 바뀐 뒤 사용합니다. 연습실 대화 중에 공연용 사진을 먼저 꺼내지 않습니다.</p><div class="manual-example"><div class="manual-example-head"><p>직접 작성하는 연출 예시</p><button type="button" class="copy-example" data-copy-example="sample-scene-stage" aria-label="직접 작성하는 연출 예시 복사">복사</button></div><pre><code id="sample-scene-stage">*마지막 곡의 전주가 흐른다. 강이준이 자기 마이크를 잡는다.*
+@강이준_06
+@강이준
+준비됐어. 네 박자에 맞출게.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div><h3>상황 라벨은 장면을 구별할 수 있게 적어요</h3><p>“잘생긴 사진 1, 잘생긴 사진 2”보다 <strong>슬픈 / 화난 / 부끄러운</strong>처럼 서로 다른 순간을 설명합니다. 웃는 사진에 슬픈 라벨을 붙이면 이미지와 대화가 어긋납니다. 한 인물은 머리·눈·의상 같은 특징을 유지하고 표정·몸짓·빛으로 차이를 주세요.</p><p>자동 연출을 살펴볼 때는 “슬픈 이미지를 보여 줘”라는 지시만 보내기보다 작품 속 행동을 입력해 봅니다. 예를 들어 <strong>“그날 왜 안 왔는지, 이번에는 네 말로 듣고 싶어.”</strong>라고 물은 뒤, 이준이 어떤 말과 표정으로 답하는지 확인하세요.</p></section><section class="doc-section" id="goals"><p class="manual-section-label">09 · 진행 설정</p><h2><a class="heading-link" href="#goals">목표는 도착점, 진행 규칙은 가는 방법이에요</a></h2>
+<p><strong>목표 추가</strong>를 누르면 목표 설정이 열립니다. “사랑에 빠진다”처럼 사용자의 마음을 강제로 정하기보다, 대화에서 확인할 수 있는 사건을 목표로 잡습니다.</p>
+<div class="manual-example"><div class="manual-example-head"><p>목표 내용에 입력 · 최대 2,000자</p><button type="button" class="copy-example" data-copy-example="sample-goal" aria-label="목표 내용에 입력 · 최대 2,000자 복사">복사</button></div><pre><code id="sample-goal">두 사람이 마지막 축제 무대를 함께할지 솔직히 이야기하고, 다음 행동을 직접 합의한다. 화해나 연애 시작은 필수 조건이 아니다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<ol><li><strong>달성 조건 → 조건 추가 → 최소 턴 수</strong>를 골라 <strong>4</strong>를 입력합니다. AI가 사용자 입력에 답한 한 차례를 1턴으로 세며 시작 장면은 제외합니다.</li><li><strong>조건 추가 → 상황 조건</strong>을 골라 아래 상황을 입력합니다.</li><li><strong>달성 이미지 → 라이브러리</strong>에서 이 작품에 등록한 강이준의 웃는 이미지 <code>@강이준_01</code>을 고릅니다.</li><li><strong>달성하면 이야기 끝내기</strong>는 끕니다. 다음 연습과 공연으로 계속 진행할 수 있도록 합니다.</li><li>상단 <strong>저장</strong>을 누릅니다.</li></ol>
+<div class="manual-example"><div class="manual-example-head"><p>상황 내용에 입력 · 최대 2,000자</p><button type="button" class="copy-example" data-copy-example="sample-goal-condition" aria-label="상황 내용에 입력 · 최대 2,000자 복사">복사</button></div><pre><code id="sample-goal-condition">강이준이 3년 전 공연에 오지 못하고 연락을 피한 이유를 직접 말했으며, @user와 강이준이 다음 연습 또는 공연을 어떻게 할지 명시적으로 합의했다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p class="manual-note">추가한 조건은 <strong>모두 충족</strong>해야 합니다. 이 예제는 4턴이 지났다는 이유만으로 달성되지 않습니다. 이준의 직접 설명과 두 사람의 합의가 함께 필요합니다. 상황의 충족 여부는 실제 대화 내용으로 판단합니다.</p>
+<dl class="manual-controls"><dt>스탯 조건</dt><dd>먼저 고급 설정에서 스탯을 만든 뒤 사용합니다. 스탯·조건 값·이상 또는 이하를 고릅니다.</dd><dt>조건의 −</dt><dd>그 조건만 제거합니다. 조건을 하나도 넣지 않으면 목표 내용으로 달성 여부를 판단합니다.</dd><dt>달성 이미지 → 업로드</dt><dd>기기의 사진을 새로 선택합니다. <strong>라이브러리</strong>는 현재 작품의 등록 애셋을 고르는 경로입니다.</dd><dt>이미지 제거</dt><dd>목표 달성 때 보여 줄 그림을 해제합니다.</dd><dt>달성하면 이야기 끝내기</dt><dd>켜면 달성 시 이야기를 마무리합니다. 엔딩의 내용을 목표에 구체적으로 적습니다. 여러 엔딩이 함께 충족되면 위쪽 엔딩이 우선합니다.</dd><dt>목표 카드 누르기</dt><dd>저장한 목표를 다시 편집합니다.</dd><dt>목표 카드 길게 누르기</dt><dd><strong>수정 / 복제 / 위로 이동 / 아래로 이동 / 삭제</strong>를 선택합니다.</dd><dt>취소</dt><dd>목표 설정의 변경을 확정하지 않고 돌아갑니다.</dd></dl>
+<h3>진행 규칙으로 전개의 속도를 정해요</h3>
+<div class="manual-example"><div class="manual-example-head"><p>진행 규칙에 입력 · 최대 20,000자</p><button type="button" class="copy-example" data-copy-example="sample-progress" aria-label="진행 규칙에 입력 · 최대 20,000자 복사">복사</button></div><pre><code id="sample-progress">한 응답에서 한 장면의 변화만 다룬다. 먼저 @user의 행동에 반응한 뒤, 강이준의 짧은 대사와 구체적인 몸짓으로 관계를 드러낸다. 대화 없이 재회에서 고백이나 공연 종료로 건너뛰지 않는다. 과거에 대한 질문을 피하기만 하지 말고, 충분히 대화한 뒤 이준이 자기 책임을 인정하며 이유를 직접 설명하게 한다. 연습실을 떠나거나 시간대를 바꾸기 전에는 플레이어의 선택을 기다린다. 감정이 분명한 장면에는 해당 상황 애셋을 사용하고, 불분명하면 기본 이미지를 사용한다. 웃음, 슬픔, 화남, 부끄러움, 놀람을 같은 순간에 모두 붙이지 않는다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<p>목표 달성 이미지는 달성 응답 뒤 한 번 보여 주는 연출입니다. 매번 캐릭터가 말할 때 나오는 상황 이미지와 구분해 선택하세요.</p>
+</section><section class="doc-section" id="stats"><p class="manual-section-label">10 · 고급 설정 · 선택</p><h2><a class="heading-link" href="#stats">수치로 표현할 변화가 있다면 스탯을 넣어요</a></h2>
+<p>이야기를 만들 때 스탯은 필수가 아닙니다. 이 예제에서는 이준이 자기 마음을 말할 준비 정도를 <strong>솔직함</strong>으로 표현할 수 있습니다. 플레이어의 호감이나 동의를 숫자로 대신 결정하지 않습니다.</p>
+<ol><li><strong>고급 설정 · 선택 → 스탯 추가</strong>를 누릅니다.</li><li>표시할 <strong>아이콘</strong>을 고르고 <strong>이름</strong>에 <code>솔직함</code>, <strong>초기값</strong>에 <code>30</code>을 입력합니다. <strong>단위</strong>는 비워 둡니다.</li><li><strong>스탯 설명</strong>에 누구의 무엇인지, 어떤 행동에 얼마나 변하는지 씁니다.</li><li><strong>수치 범위</strong>를 펼쳐 최솟값 <code>0</code>, 최댓값 <code>100</code>을 설정합니다.</li></ol>
+<div class="manual-example"><div class="manual-example-head"><p>스탯 설명에 입력 · 최대 800자</p><button type="button" class="copy-example" data-copy-example="sample-stat" aria-label="스탯 설명에 입력 · 최대 800자 복사">복사</button></div><pre><code id="sample-stat">강이준이 @user에게 자기 마음과 과거를 솔직하게 말할 준비가 된 정도. 차분히 기다리거나 진심을 물으면 5~10 증가한다. 비꼬거나 대답을 강요하면 5 감소한다. 이 수치는 @user의 애정이나 동의를 뜻하지 않는다.</code></pre><span class="copy-status" role="status" aria-live="polite"></span></div>
+<h3>구간별 반응을 나눠요</h3><p><strong>구간별 반응 → 단계 추가</strong>로 이름·범위·행동을 입력합니다. 경곗값이 겹치지 않게 아래처럼 나누고 <strong>저장</strong>합니다.</p>
+<div class="table-scroll"><table><caption>솔직함의 단계 예시</caption><thead><tr><th scope="col">단계 이름</th><th scope="col">범위</th><th scope="col">이 구간에서의 행동·상황</th></tr></thead><tbody><tr><th scope="row">농담 뒤에 숨음</th><td>0 이상 ~ 29 이하</td><td>가벼운 농담으로 긴장을 덮지만 같은 질문을 반복해서 회피하지 않는다.</td></tr><tr><th scope="row">말을 고르는 중</th><td>30 이상 ~ 69 이하</td><td>진지한 질문에는 농담을 멈추고 짧게라도 솔직히 답한다.</td></tr><tr><th scope="row">마음을 전함</th><td>70 이상 ~ 100 이하</td><td>자기 책임과 바람을 분명히 말한다. 상대의 용서나 연애 감정을 대신 확정하지 않는다.</td></tr></tbody></table></div>
+<dl class="manual-controls"><dt>표시 미리보기</dt><dd>플레이에서 보일 모양과 <strong>초기값</strong>을 확인합니다. 진행 중의 변화는 실제 플레이에서 확인합니다.</dd><dt>단계 삭제</dt><dd>해당 구간의 반응 설정을 지웁니다.</dd><dt>스탯 삭제</dt><dd>기존 스탯 자체를 제거합니다. 관련 목표의 스탯 조건도 함께 확인하세요.</dd><dt>저장</dt><dd>이름·수치·범위 등을 확인하고 확정합니다. 초기값은 최솟값과 최댓값 사이여야 합니다.</dd><dt>진행 설정 / 미리보기</dt><dd>고급 설정에서 진행 설정으로 돌아가거나 완성 전 확인을 엽니다.</dd></dl>
+<p><strong>등록한 스탯은 이야기 채팅 맨 아래에 자동으로 표시됩니다.</strong> 현재 값·최댓값·단위·진행바·현재 단계명을 확인할 수 있으며, 대화가 끝나면 최신 값으로 갱신됩니다. 다시 들어와도 저장된 값을 이어 봅니다. 공개하도록 설정된 목표도 하단에서 확인하며, 스탯의 내부 변화 규칙과 숨긴 목표는 표시하지 않습니다. 작품 상세의 프롤로그에는 스탯이 나오지 않습니다.</p>
+<p>스탯 이름과 단계 이름은 20자, 단위는 8자, 구간 행동은 300자까지입니다. 한 칸을 한계까지 채우기보다 플레이에서 확인할 변화를 짧게 적으세요.</p>
+</section><section class="doc-section" id="save"><p class="manual-section-label">11 · 자동 저장과 완성</p><h2><a class="heading-link" href="#save">최신 초안은 자동 저장하고, 확인 후 완성해요</a></h2>
+<dl class="manual-controls"><dt>최신 초안 자동 저장</dt><dd>입력한 내용은 잠시 후 자동 저장됩니다. 스토리 만들기 상단의 수동 저장·내역 버튼은 없어졌으며, 과거 시점을 골라 복원하는 화면은 제공하지 않습니다.</dd><dt>저장 실패 · 재시도</dt><dd>저장에 실패했을 때만 표시됩니다. 눌러 다시 저장합니다.</dd><dt>뒤로가기</dt><dd>최신 내용을 저장한 뒤 편집기를 나갑니다. 저장에 실패하면 화면에 남습니다. 다음에는 작가센터의 <strong>제작중</strong> 작품에서 이어서 작성합니다.</dd><dt>미리보기 5/5</dt><dd><strong>완성 전 확인</strong>에서 프롤로그와 시작 장면을 다시 읽습니다. 수정이 필요하면 <strong>수정하기</strong>로 돌아갑니다.</dd><dt>완성하기</dt><dd>필수 설정을 갖춘 비공개 완성본을 <strong>내 스토리</strong>에 만듭니다. 새 초안은 추가한 모든 시작에 표시할 내용이 있어야 완성할 수 있습니다.</dd></dl>
+<p>목표·스탯·캐릭터 소개처럼 별도 편집창 안에 있는 <strong>저장</strong>은 그 항목의 변경을 확정하는 버튼입니다. 해당 편집창에서는 저장을 눌러 반영하세요.</p>
+<p>완성한 작품은 <strong>이야기시작</strong>로 확인합니다. 완성본을 나중에 수정하면 원본과 연결된 편집 초안에서 작업합니다. 수정 화면을 열었다는 이유만으로 기존 완성본이 즉시 삭제되는 것은 아닙니다.</p>
+<h3 id="token-quote">상단 토큰을 눌러 설정 분량과 예상 요금을 확인해요</h3>
+<p><strong>약 ○○토큰 → 토큰과 예상 요금</strong>에서 베이직·하트·딥의 대화 1회 예상 요금을 봅니다. 상단 숫자는 설정량에 여유를 더한 추정치이며, 여러 시작의 내용을 모두 더하지 않고 가장 큰 시작을 기준으로 표시합니다. 정확한 실제 사용량이나 현재 차감액을 뜻하지 않습니다.</p>
+<p>전체 설정은 <strong>64,000토큰</strong> 한도로 확인합니다. 세계관·금지전개·인물 및 장소 설명은 개별 글자 제한 대신 이 전체 설정량을 함께 사용하고, 진행 규칙은 별도로 20,000자까지 입력합니다. 표시용 예상 토큰에는 여유분이 포함되므로 저장 가능 여부는 화면에 나타나는 실제 안내를 확인하세요.</p>
+<p class="manual-note">요금 화면의 <strong>용량 추가 요금은 적용 예정</strong>입니다. 모델별 기본 요금과 추가 요금의 확정 여부를 함께 확인하고, 예상 금액을 현재 실제 차감액으로 해석하지 마세요.</p>
+<h3 id="ai">AI 버튼은 언제 쓰나요?</h3><p>직접 쓴 예제를 바탕으로 한 칸씩 정리한 뒤, 막히는 빈 항목이 있으면 하단 <strong>AI</strong>를 사용해 보세요. 현재 단계의 빈칸만 채우며 이미 입력한 텍스트는 유지합니다. 시작 장면에서는 선택한 탭에 적용되며, AI가 작성하는 도중 탭이나 내용을 바꾸면 이전 요청의 결과는 적용하지 않습니다.</p>
+<dl class="manual-controls"><dt>AI로 채우기</dt><dd>세계관·인물 등 지금까지 입력한 내용을 바탕으로 현재 단계의 비어 있는 항목을 채웁니다. 결과를 읽고 어울리지 않는 부분은 직접 수정합니다.</dd><dt>되돌리기</dt><dd>AI 작성 후 다른 편집을 하지 않았다면 그 작성 직전 상태로 되돌립니다.</dd><dt>AI 목표</dt><dd>진행 설정에서 목표 하나를 추가합니다. 기존 목표 전체를 바꾸는 기능은 아닙니다.</dd></dl>
+<p>빈칸이 없거나 연결된 AI 서버에서 응답을 받지 못하면 안내가 표시됩니다. AI가 채웠다는 이유만으로 작품이 완성되거나 공개되지는 않습니다.</p>
+</section><section class="doc-section" id="play"><p class="manual-section-label">12 · 플레이하며 다듬기</p><h2><a class="heading-link" href="#play">만든 설정이 어떻게 보이는지 직접 확인해요</a></h2>
+<ol><li>작품 상세의 프롤로그를 읽고, <strong>이야기시작</strong> 뒤에는 작성한 시작 장면이 표시되는지 확인합니다. 시작이 여러 개면 각 출발점을 새 플레이로 확인합니다. 이준의 이미지, 상황 서술, 이름, 대사의 순서를 살펴보세요.</li><li>시작 장면을 읽은 뒤 <strong>“악보를 받으며 묻는다. 무슨 곡인데?”</strong>처럼 행동 하나를 보냅니다. 입력에 반응하면서도 과거의 비밀을 처음부터 전부 털어놓지 않는지 봅니다.</li><li>농담, 과거에 대한 질문, 다정한 칭찬처럼 다른 상황을 만들어 이미지를 살펴봅니다. 원하는 컷이 정해져 있다면 시작 장면이나 프롤로그에 번호를 직접 넣어 비교합니다.</li><li>채팅 맨 아래의 스탯이 설정한 초기값으로 시작하고, 행동을 보낸 뒤 갱신되는지 확인합니다. 약속과 합의가 실제로 생긴 뒤 목표가 달성되는지도 살펴봅니다. 아직 말하지 않은 사실을 달성한 것으로 처리하면 조건을 더 구체적으로 적습니다.</li><li>본편 속 인물 이름에서 개인 대화로 이어 가고, <strong>☰ → AI의 기억</strong>에서 이 방이 참고할 사건과 관계를 확인합니다.</li></ol>
+<p>예를 들어 이준에게 “다음 연습은 내일 여섯 시로 하자”고 말해 합의했다면, 이어진 개인 대화에서 <strong>“우리 다음 연습 언제로 했지?”</strong>라고 물을 수 있습니다. 합의하지 않은 내용을 미리 기억에 넣어 결과를 맞추지는 않습니다.</p>
+<div class="manual-links"><a href="/hypecheese/guide.html#story">스토리챗 조작법 →</a><a href="/hypecheese/guide.html#character">본편 연계·홈 독립 캐릭터챗 →</a><a href="/hypecheese/guide.html#memory">AI의 기억 확인·수정 →</a></div>
+<h3 id="troubleshooting">막히는 부분 빠르게 찾기</h3>
+<details><summary>@이름을 썼는데 인물로 등록되지 않아요</summary><p>등장인물 및 장소 칸의 새 줄에 적은 뒤 엔터를 눌러 확정합니다. 프롤로그에서 쓰는 화자 이름과 등록 칸은 다릅니다. 이름 길이와 중복 여부도 확인하세요.</p></details>
+<details><summary>@user를 이름으로 등록할 수 없어요</summary><p>플레이어를 가리키는 예약 변수라서 정상적으로 제한됩니다. 인물에는 강이준처럼 별도의 이름을 등록하고, 설명 속에서 사용자를 지칭할 때만 @user를 씁니다.</p></details>
+<details><summary>@이름을 입력해도 사진 추천이 보이지 않아요</summary><p>먼저 그 이름에 이미지를 등록했는지 확인합니다. 프롤로그 또는 시작 장면의 새 줄 맨 앞에서 정확한 이름을 입력합니다. 일부만 쓰거나 문장 중간에 적으면 추천이 나타나지 않을 수 있습니다.</p></details>
+<details><summary>@강이준_2로는 그림이 안 나와요</summary><p>번호는 두 자리로 씁니다. <code>@강이준_02</code>처럼 입력하고 실제로 두 번째 상황 이미지가 있는지 확인하세요. 기본 이미지는 <code>@강이준_00</code>입니다.</p></details>
+<details><summary>슬픈 장면에 웃는 그림이 나와요</summary><p>사진에 지정한 상황 라벨과 장면 설명이 일치하는지 확인합니다. 여러 감정을 한 번에 나열했다면 중심 감정을 하나로 정리해 보세요. 반드시 슬픈 컷을 써야 하는 고정 장면에는 정확한 번호를 직접 지정합니다.</p></details>
+<details><summary>다음 단계로 갔는데 완성하기가 안 돼요</summary><p>제목·한 줄 소개·실제로 적용된 표지·장르·태그를 확인합니다. 세계관·등장인물 설명과 추가한 모든 시작의 본문도 필요합니다. 완성 전 확인에서 안내하는 누락 항목이나 설정량 초과를 확인하고 돌아가 수정합니다.</p></details>
+<details><summary>저장 버튼이나 저장 내역이 보이지 않아요</summary><p>최신 초안 자동 저장으로 바뀌었습니다. 편집기를 나갈 때도 저장하며, 실패하면 <strong>저장 실패 · 재시도</strong>를 누릅니다. 과거 시점을 선택해 복원하는 기능은 현재 화면에서 제공하지 않으므로, 큰 수정 전에 남겨 두고 싶은 원문은 따로 복사해 보관하세요.</p></details>
+<details><summary>시작하기를 눌렀는데 AI가 새 장면을 만들지 않아요</summary><p>현재는 작가가 선택한 시작 탭의 본문과 이미지를 그대로 보여 줍니다. 추천 행동을 고르거나 직접 첫 행동을 보내면 AI가 그 장면 다음을 이어 갑니다.</p></details>
+</section><div class="manual-end"><a class="back-top" href="#top">맨 위로 ↑</a></div></article></div></main>  <footer class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-nav" aria-label="정책과 문의">
+        <a href="/hypecheese/terms.html">이용약관</a>
+        <a href="/hypecheese/privacy.html"><strong>개인정보처리방침</strong></a>
+        <a href="/hypecheese/guide.html#help">도움말</a>
+        <a href="/#projects">Studio5 프로젝트</a>
+      </nav>
+      <p class="operator">Studio5 · 대표 김성현</p>
+      <p>사업자등록번호 897-78-00494 · 통신판매업신고번호 2024-부산진-1049</p>
+      <p>서비스·개인정보 문의 <a href="mailto:studiofiveteam@gmail.com">studiofiveteam@gmail.com</a></p>
+      <p>© 2026 Studio5</p>
+    </div>
+  </footer>
+</body></html>

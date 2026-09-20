@@ -6,6 +6,7 @@ Existing Studio5 repository and Vercel deployment are retained. No web framework
 
 - `/hypecheese/`: introduction and document directory
 - `/hypecheese/guide.html`: current local-test product guide
+- `/hypecheese/create-guide.html`: detailed creation examples and current editor controls
 - `/hypecheese/terms.html`: terms
 - `/hypecheese/privacy.html`: privacy notice
 - `/hypecheese/collection.html`: separate signup collection/use consent
@@ -14,7 +15,7 @@ Existing Studio5 repository and Vercel deployment are retained. No web framework
 - `/hypecheese/updates/`: published app-version changes; currently empty
 - `/hypecheese/feed.json`: shared public source consumed by the app
 
-All policy documents carry `2026-09-14-local-v1`, effective and last-modified date September 14, 2026, and explicitly apply to the current local test. These are not an assertion that cloud processing, paid product release, or the full production legal review has been completed. App consent records must store the version actually accepted; do not retroactively rewrite older accepted versions.
+The original policy documents carry `2026-09-14-local-v1`, effective September 14, 2026, and explicitly apply to the current local test. These are not an assertion that cloud processing, paid product release, or the full production legal review has been completed. App consent records must store the version actually accepted; do not retroactively rewrite older accepted versions.
 
 ## Publishing a notice or update
 
@@ -43,6 +44,10 @@ The general guide and policy HTML are edited directly. `scripts/hypecheese_layou
 - Public operator source: existing Studio5 `index.html` and `paymentdeclaration/privacy.html` at baseline commit `aff7695`, confirming Studio5 / 김성현 / 897-78-00494 / 2024-부산진-1049 / studiofiveteam@gmail.com. No unverified business address or phone number was invented.
 - Legal primary references checked 2026-09-14: [Personal Information Protection Act Art. 30](https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1029331583), [Act on Consumer Protection in Electronic Commerce](https://www.law.go.kr/lsInfoP.do?ancYnChk=0&lsId=009318). These guide disclosure structure and preserve statutory cancellation/refund rights; no arbitrary retention periods or blanket refund exclusion were created.
 
-The current LM Studio endpoint may use HTTP and logs/retention are not established by client code. The notice discloses that limit. A future cloud model, hosting/processor arrangement, export, retention period, learning use, or paid product requires concrete processing terms and a corresponding policy/consent update before introduction.
+The September 21 technical correction in the privacy notice identifies Basic/authoring requests sent through the development gateway to Google Gemini, links the provider terms, and preserves the original signup consent scope/version. Other model endpoints may use HTTP and logs/retention are not established by client code. A future cloud model, hosting/processor arrangement, export, retention period, learning use, or paid product requires concrete processing terms and a corresponding policy/consent update before introduction.
 
 Additional primary references checked: [Information and Communications Network Act Art. 50(3), separate night-marketing consent](https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1030434421), [KISA privacy reporting contact](https://privacy.kisa.or.kr/).
+
+## September 21 guide refresh
+
+Project conversation findings were checked against current app code; see `Docs/Guide/2026-09-21-guide-update.md`. The creator manual continues the existing unfinished local draft, with obsolete screenshot placeholders removed. Notice metadata and the app bundled feed are synchronized. This is a guide update, not an app release.
