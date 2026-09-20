@@ -53,6 +53,7 @@ main { max-width: 1160px; padding: 56px 28px 88px; margin: 0 auto; }
 .toc li { margin: 0; }
 .toc a { display: block; padding: 9px 14px; color: var(--muted); text-decoration: none; }
 .toc a:hover { color: var(--accent); }
+.toc a[aria-current="location"] { color: var(--accent); background: #ff920014; box-shadow: inset 3px 0 0 var(--accent); font-weight: 700; }
 .doc-content { min-width: 0; max-width: 760px; }
 .doc-section { border-top: 1px solid var(--line); padding-top: 32px; margin-bottom: 48px; }
 .doc-section:first-child { border-top: 0; padding-top: 0; }
@@ -114,6 +115,7 @@ details p { margin-top: 14px; color: var(--muted); }
   .toc { position: static; max-height: none; padding: 18px; background: var(--surface); border-radius: var(--radius); }
   .toc ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: none; gap: 0 10px; }
   .toc a { padding: 8px 0; min-height: 44px; }
+  .doc-layout .toc a[aria-current="location"] { padding-left: 10px; }
   .doc-section { margin-bottom: 38px; padding-top: 26px; }
   .service-hero { grid-template-columns: 1fr; gap: 24px; padding-top: 12px; }
   .hero-icon { width: 76px; height: 76px; border-radius: 18px; grid-row: 1; }
