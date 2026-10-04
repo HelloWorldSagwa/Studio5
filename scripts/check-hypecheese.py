@@ -77,7 +77,8 @@ for kind in ("notices", "updates"):
 if len(ids) != len(set(ids)): errors.append("duplicate public feed IDs")
 for page in ("terms", "privacy", "collection", "marketing"):
     text = (ROOT / f"hypecheese/{page}.html").read_text()
-    if "2026-09-14-local-v1" not in text or "시행일 2026.09.14" not in text:
+    version = "2026-10-04-account-v1" if page in {"terms", "privacy"} else "2026-09-14-local-v1"
+    if version not in text or "시행일 2026.09.14" not in text:
         errors.append(f"{page}: policy version/date mismatch")
 
 if errors:
