@@ -51,3 +51,7 @@ Additional primary references checked: [Information and Communications Network A
 ## September 21 guide refresh
 
 Project conversation findings were checked against current app code; see `Docs/Guide/2026-09-21-guide-update.md`. The creator manual continues the existing unfinished local draft, with obsolete screenshot placeholders removed. Notice metadata and the app bundled feed are synchronized. This is a guide update, not an app release.
+
+## October 10 disclosure correction
+
+The `2026-10-10-disclosure-v1` notice distinguishes current cloud-account processing from the historical local consent scope. Original acceptance version identifiers are unchanged; this is not a consent migration or an assertion of complete production compliance. Pre-edit documents are preserved in the workspace `핵심지침/근거/2026-10-10-수정전/`. The controlling policy and implementation checklist are in the workspace `핵심지침/` directory. The app already loads these URLs using SignupLegalDocumentView, including the settings document route. No app layout or stored consent is changed by this disclosure update.
